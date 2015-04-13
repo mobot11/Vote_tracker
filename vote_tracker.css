@@ -1,0 +1,30 @@
+body {
+  font-family:  'Marcellus SC', serif;
+  background-image:url("http://wallpaperus.org/wallpapers/04/133/coliseum-hdr-1600x939-wallpaper-1683138.jpg");
+  color: #FFD34E;
+}
+article {
+  width: 400px;
+  height: 400px;
+  display: inline;
+}
+
+
+img {
+  width: 350px;
+  height: 350px;
+  -webkit-box-shadow: 0 0 50px #000000;
+}
+
+img:hover {
+  -webkit-box-shadow: 0 0 50px #ccc;
+}
+
+header {
+  text-align: center;
+}
+
+.content {
+  margin-left: 5%;
+  position: fixed;
+}
