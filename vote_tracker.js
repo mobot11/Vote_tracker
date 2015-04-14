@@ -47,47 +47,6 @@ Kitty.prototype.render = function(){
 };
 
 
-
-
-// var Img = function(){
-//     this.redKittyArray = [kittyOne, kittyThree, kittyFive, kittySeven, kittyNine, kittyEleven, kittyThirteen];
-//     this.goldKittyArray = [kittyTwo, kittyFour, kittySix, kittyEight, kittyTen, kittyTwelve,
-//     kittyFourteen]
-//     this.kittyObj1 = '';
-//     this.kittyObj2 = '';
-// };
-
-
-// Img.prototype.getRed = function(){
-//   this.kittyObj1 = this.redKittyArray[Math.floor(Math.random() * this.redKittyArray.length)]
-//    return this.kittyObj1;
-
-    // imageEl1.appendChild(newImage1);
-// };
-// Img.prototype.getGold = function() {
-//     this.kittyObj2 = this.goldKittyArray[Math.floor(Math.random() * this.goldKittyArray.length)]
-//     return this.kittyObj2;
-
-    // newImage2.src = kittyLink2;
-    // imageEl2.appendChild(newImage2);
-// };
-
-// Img.prototype.renderRed = function(){
-//     var imageEl1 = document.getElementById("image1")
-//     var newImage1 = document.createElement('img')
-//     var kittyLink1 = this.getRed();
-//     newImage1.src = kittyLink1.imgLink
-//     imageEl1.appendChild(newImage1);
-// };
-// Img.prototype.renderGold = function(){
-//   var imageEl2 = document.getElementById("image2");
-//   var newImage2 = document.createElement('img');
-//   var kittyLink2 = this.getGold();
-//   newImage2.src = kittyLink2.imgLink;
-//   imageEl2.appendChild(newImage2);
-// };
-
-//  window.Img = Img;
  window.Kitty = Kitty;
 
 })();
