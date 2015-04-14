@@ -3,6 +3,7 @@ var Kitty = function (imgLink, color) {
     this.imgLink = imgLink;
     this.color = color;
     this.score = 0;
+    this.kittyArray = [];
 };
 
 var kittyOne = new Kitty("contestants/01 - pPA0iM0.jpg", "red");
@@ -19,6 +20,8 @@ var kittyEleven = new Kitty("contestants/11 - aGJW6lS.jpg", "red");
 var kittyTwelve = new Kitty("contestants/12 - 60maZWt.jpg", "gold");
 var kittyThirteen = new Kitty("contestants/13 - u9wzm0f.jpg", "red");
 var kittyFourteen = new Kitty("contestants/14 - vyz8MGP.jpg", "gold");
+
+
 
 var Img = function(){
     this.redKittyArray = [kittyOne, kittyThree, kittyFive, kittySeven, kittyNine, kittyEleven, kittyThirteen];
