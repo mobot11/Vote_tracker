@@ -3,6 +3,7 @@ var Kitty = function (imgLink, color) {
     this.imgLink = imgLink;
     this.color = color;
     this.score = 0;
+    this.graphTotal = 50;
 };
 
 var kittyOne = new Kitty("contestants/01 - pPA0iM0.jpg", "red");
@@ -26,11 +27,14 @@ var kittyFourteen = new Kitty("contestants/14 - vyz8MGP.jpg", "gold");
   kittyFourteen]
 
 
+
 Kitty.prototype.render = function(){
   var imageEl1 = document.getElementById('image1');
   var imageEl2 = document.getElementById('image2');
   var newImage1 = document.createElement('img');
   var newImage2 = document.createElement('img');
+  newImage1.src = '';
+  newImage2.src = '';
   this.kitty1 = kittyArray[Math.floor(Math.random() * kittyArray.length)];
   this.kitty2 = kittyArray[Math.floor(Math.random() * kittyArray.length)];
   while (this.kitty1 === this.kitty2) {
@@ -45,8 +49,7 @@ Kitty.prototype.render = function(){
   imageEl2.appendChild(newImage2);
 
 };
-
-
+ window.kittyArray = kittyArray;
  window.Kitty = Kitty;
 
 })();

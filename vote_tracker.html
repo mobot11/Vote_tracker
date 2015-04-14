@@ -2,9 +2,9 @@
 <html>
 <head>
   <title></title>
-  <link rel="stylesheet" type="text/css" href="vote_tracker.css">
+  <link rel="stylesheet" type="text/css" href="css/vote_tracker.css">
   <link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
-  <script src='Chart.min.js'></script>
+  <script src='javascript/lib/Chart.min.js'></script>
 </head>
 <body>
   <header>
@@ -12,18 +12,19 @@
     <h4>Choose which kitten deserves the glory of victory</h4>
   </header>
   <content class="content">
-    <article id="image1">
+    <article id="image1" class="images">
     </article>
     <canvas id="kittenTable" width="300" height="300"></canvas>
 
     </canvas>
-    <article id="image2">
+    <article id="image2" class="images">
 
     </article>
+    <div id="button"></div>
     </content>
-<script src="vote_tracker.js"></script>
-<script src="kittenChart.js"></script>
-<script src="events.js"></script>
+<script src="javascript/vote_tracker.js"></script>
+<script src="javascript/kittenChart.js"></script>
+<script src="javascript/events.js"></script>
 
 </body>
 </html>

@@ -29,4 +29,11 @@ header {
   position: fixed;
 }
 
+#button {
+  margin-left: 23%;
+}
 
+button {
+  width: 50em;
+  height: 5em;
+}
