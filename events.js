@@ -1,35 +1,21 @@
 (function(){
-var Img = window.Img;
+// var Img = window.Img;
 var Kitty = window.Kitty;
-var redImageContainer = document.getElementById('image1');
-var goldImageContainer = document.getElementById('image2');
+var ImageContainer1 = document.getElementById('image1');
+var ImageContainer2 = document.getElementById('image2');
 
 var imgContainerLoad = function (event){
   event.preventDefault();
-  var newImage = new Img();
-  newImage.renderRed();
-  newImage.renderGold();
-
+  var newKitty = new Kitty();
+  newKitty.render();
 };
 
-var redImageSumbit = function (event) {
-  var newImage = new Img();
-  var kittyScore = newImage.getRed();
-  kittyScore.score += 1;
-  console.log(kittyScore.score);
-  };
+// var imgClickFunction = function(event){
+//   event.preventDefault();
 
-var goldImageSubmit = function (event){
-  var newImage = new Img();
-  var kittyScore = newImage.getGold();
-  kittyScore.score += 1;
-  console.log(kittyScore.score);
-};
+// };
+
+// imageContainer1.addEventListener("click", imgClickFunction)
 
 window.addEventListener("load", imgContainerLoad);
-
- redImageContainer.addEventListener('click', redImageSumbit);
- goldImageContainer.addEventListener('click', goldImageSubmit);
-// imgContainer2.addEventListener('click', imgContainerSubmit2);
-
 })();
