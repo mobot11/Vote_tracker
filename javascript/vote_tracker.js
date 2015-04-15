@@ -19,6 +19,8 @@ var filepath = ["contestants/01.jpg","contestants/02.jpg", "contestants/03.jpg",
  })
 
 
+var scoreArray = [];
+
 
 
 
