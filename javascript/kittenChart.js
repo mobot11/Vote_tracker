@@ -1,19 +1,20 @@
+var renderTable = function(value1, value2) {
 var kittenTable= document.getElementById("kittenTable").getContext("2d");
-// new Chart(countries).Pie(pieData, pieOptions);
 var pieData = [
     {
-        value: 50,
+        value: value1,
         color:"gold"
     },
     {
-        value : 50,
+        value : value2,
         color : "red"
     },
-
 ];
 var pieOptions = {
     segmentShowStroke : false,
     animateScale : true
 }
 new Chart(kittenTable).Pie(pieData, pieOptions);
+};
 
+renderTable(50,50);

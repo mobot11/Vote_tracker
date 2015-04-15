@@ -25,12 +25,14 @@ header {
 }
 
 .content {
-  margin-left: 5%;
+  margin-left: 10%;
   position: fixed;
 }
 
 #button {
   margin-left: 23%;
+  font-family:  'Marcellus SC', serif;
+  color: red;
 }
 
 button {

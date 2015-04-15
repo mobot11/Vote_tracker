@@ -1,78 +1,42 @@
-(function(){
+$(function(){
 // var Img = window.Img;
 var kittyArray = window.kittyArray
 var Kitty = window.Kitty;
-var imageContainer1 = document.getElementById('image1');
-var imageContainer2 = document.getElementById('image2');
-
 
 window.newKitty = new Kitty();
 newKitty.render();
 
-var imgClickFunction1 = function(event){
+$("#button").toggle();
+
+$("#image1").click(function(event){
   event.preventDefault();
-  var kittyScore = newKitty.kitty1;
-  // var kittyObj = kittyArray.indexOf(kittyScore);
-  kittyScore.score += 1;
-  var buttonEl = document.getElementById('button');
-  var btn = document.createElement('BUTTON');
-  var t = document.createTextNode('The red kitty won, click here to play again!');
-  btn.appendChild(t);
-  buttonEl.appendChild(btn);
+  var kittyScore1 = newKitty.kitty1;
+  var kittyScore2 = newKitty.kitty2;
+  kittyScore1.graphTotal += 10;
+  kittyScore2.graphTotal -= 10;
+  $("#button").toggle();
+  renderTable(kittyScore2.graphTotal, kittyScore1.graphTotal);
+  $("#button").text("The red kitty wins, click here to vote again!")
 
-  var reloadFunction = function(event){
-    event.preventDefault();
-    var imgEl1 = document.getElementById("image1");
-    var imgEl2 = document.getElementById('image2');
-    var btnEl = document.getElementById('button');
-    while (imgEl1.firstChild) {
-      imgEl1.removeChild(imgEl1.firstChild);
-    }
-    while (imgEl2.firstChild) {
-      imgEl2.removeChild(imgEl2.firstChild);
-    }
-    while (btnEl.firstChild) {
-      btnEl.removeChild(btnEl.firstChild);
-    }
-    newKitty.render();
-  };
-    buttonEl.addEventListener("click", reloadFunction)
-};
+});
 
-var imgClickFunction2 = function(event){
+$("#image2").click(function(event){
   event.preventDefault();
-  var kittyScore = newKitty.kitty2;
-  kittyScore.score +=1;
-  var buttonEl = document.getElementById('button');
-  var btn = document.createElement('BUTTON');
-  var t = document.createTextNode('The gold kitty won, click here to play again!');
-  btn.appendChild(t);
-  buttonEl.appendChild(btn);
-  var reloadFunction = function(event){
-    event.preventDefault();
-    var imgEl1 = document.getElementById("image1");
-    var imgEl2 = document.getElementById('image2');
-    var btnEl = document.getElementById("button");
+  var kittyScore1 = newKitty.kitty1;
+  var kittyScore2 = newKitty.kitty2;
+  kittyScore2.graphTotal += 10;
+  kittyScore1.graphTotal += 10;
+  $("#button").toggle();
+  renderTable(kittyScore1.graphTotal, kittyScore2.graphTotal)
+  $("#button").text("The gold kitty wins, click here to vote again!")
 
-    while (imgEl1.firstChild) {
-      imgEl1.removeChild(imgEl1.firstChild);
-    }
+});
 
-    while (imgEl2.firstChild) {
-      imgEl2.removeChild(imgEl2.firstChild);
-    }
-
-    while (btnEl.firstChild) {
-      btnEl.removeChild(btnEl.firstChild);
-    }
+  $("#button").click(function(event){
+    var kittyScore1 = newKitty.kitty1;
+    var kittyScore2 = newKitty.kitty2;
+    renderTable(kittyScore2.graphTotal, kittyScore1.graphTotal);
     newKitty.render();
-  };
-    buttonEl.addEventListener("click", reloadFunction)
-};
-
-
-imageContainer1.addEventListener("click", imgClickFunction1);
-imageContainer2.addEventListener("click", imgClickFunction2);
-
-// window.addEventListener("load", imgContainerLoad);
-})();
+    $(this).toggle();
+  });
+});
