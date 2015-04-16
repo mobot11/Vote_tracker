@@ -8,10 +8,9 @@ var app = express();
 //middleware added pieces of functionality
 app.use(express.static(__dirname + '/public'));
 
-// app.get('/greet', function(request, response) {
-//   response.status(200).send('<h1>Hello Stranger!</h1>');
+app.get('/secret', function(request, response) {
+  response.status(200).send('<h1>Oh no you found out my secret lulz</h1>');
 
-  //can only use one .send in our programs
 
 });
 
@@ -23,6 +22,7 @@ app.use(express.static(__dirname + '/public'));
 //   res.send('<h1>Hello '+ req.params.person + '</h1>');
 // })
 
-app.listen(process.env.PORT || 3000, function (){
+
+app.listen(process.env.PORT || 5000, function (){
   console.log('server running');
 });
