@@ -14,7 +14,10 @@ var pieOptions = {
     segmentShowStroke : false,
     animateScale : true
 }
-new Chart(kittenTable).Pie(pieData, pieOptions);
+new Chart(kittenTable).Doughnut(pieData, pieOptions);
 };
 
 renderTable(50,50);
+
+
+

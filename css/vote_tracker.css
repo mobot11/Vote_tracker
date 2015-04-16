@@ -15,9 +15,17 @@ img {
   height: 350px;
   -webkit-box-shadow: 0 0 50px #000000;
 }
+#kittenTable{
+  background-color: gray;
+  radius: 100%;
+}
 
-img:hover {
-  -webkit-box-shadow: 0 0 50px #ccc;
+#image2:hover {
+  -webkit-box-shadow: 0 0 50px #ffff00;
+}
+
+#image1:hover {
+  -webkit-box-shadow: 0 0 50px #ff0000;
 }
 
 header {
