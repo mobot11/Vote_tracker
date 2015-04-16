@@ -1,12 +1,16 @@
-$(function(){
-// var Img = window.Img;
+var events = function () {
+$(function() {
+
 var kittyArray = window.kittyArray
 var Kitty = window.Kitty;
 
 window.newKitty = new Kitty();
+
 newKitty.render();
 
 $("#button").toggle();
+});
+
 
 $("#image1").click(function(event){
   event.preventDefault();
@@ -42,4 +46,5 @@ $("#image2").click(function(event){
     newKitty.render();
     $(this).toggle();
   });
-});
+};
+
