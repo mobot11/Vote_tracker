@@ -23,6 +23,7 @@ app.use(express.static(__dirname + '/public'));
 //   res.send('<h1>Hello '+ req.params.person + '</h1>');
 // })
 
-app.listen(process.env.PORT || 5000, function (){
+
+app.listen(process.env.PORT || 3000, function (){
   console.log('server running');
 });

@@ -1,0 +1,22 @@
+{
+  "name": "vote_tracker",
+  "version": "0.1.0",
+  "description": "an app that tracks which kitty shall live",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mobot11/Vote_tracker.git"
+  },
+  "author": "dylanmoberg@msn.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mobot11/Vote_tracker/issues"
+  },
+  "homepage": "https://github.com/mobot11/Vote_tracker",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
