@@ -1,4 +1,5 @@
 $(function(){
+  $("#button").toggle();
   var images;
   window.filePathArray = [];
 

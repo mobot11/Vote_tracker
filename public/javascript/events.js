@@ -8,7 +8,6 @@ window.newKitty = new Kitty();
 
 newKitty.render();
 
-$("#button").toggle();
 });
 
 
@@ -40,6 +39,8 @@ $("#image2").click(function(event){
 
   $("#button").click(function(event){
     $("img").css({boxShadow: '0 0 50px #000000'});
+    $("#image1").hover('boxShadow', '0 0 50px #ff0000');
+    $("#image2").hover('boxShadow', '0 0 50px #ffff00');
     var kittyScore1 = newKitty.kitty1;
     var kittyScore2 = newKitty.kitty2;
     renderTable(kittyScore2.graphTotal, kittyScore1.graphTotal);
