@@ -16,12 +16,12 @@ $(function(){
   };
   var voteTracker = function(){
 
-    var Kitty = function (imgLink) {
+    var Kitty = function (imgLink, kitty1, kitty2) {
       this.imgLink = imgLink;
-      // this.color = color;
       this.score = 0;
       this.graphTotal = 50;
-      // kittyArray = [];
+      this.kitty1 = '';
+      this.kitty2 = '';
     };
 
     var kittyArray = [];
