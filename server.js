@@ -12,7 +12,7 @@ app.get('/secret', function(request, response) {
   // response.status(200).send('<h1>Oh no you found out my secret lulz</h1>');
 var secret = "<h1>this is my mutha fuckin secret</h1>";
 response.status(200).send(secret);
-response.status(200).log(secret);
+console.log(secret);
 
 });
 
