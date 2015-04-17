@@ -7,6 +7,7 @@ var Kitty = window.Kitty;
 window.newKitty = new Kitty();
 
 newKitty.render();
+newKitty.renderTable();
 
 });
 
@@ -16,10 +17,10 @@ $("#image1").click(function(event){
   $('#image1').css({ boxShadow: '0px 0px 100px #ff0000' });
   var kittyScore1 = newKitty.kitty1;
   var kittyScore2 = newKitty.kitty2;
-  kittyScore1.graphTotal += 10;
-  kittyScore2.graphTotal -= 10;
+  kittyScore1.score += 5;
+  kittyScore2.score -= 5;
   $("#button").toggle();
-  renderTable(kittyScore2.graphTotal, kittyScore1.graphTotal);
+  newKitty.renderTable();
   $("#button").text("The red kitty wins, click here to vote again!")
 
 });
@@ -29,10 +30,10 @@ $("#image2").click(function(event){
   $('#image2').css({ boxShadow: '0px 0px 100px #ffff00' });
   var kittyScore1 = newKitty.kitty1;
   var kittyScore2 = newKitty.kitty2;
-  kittyScore2.graphTotal += 10;
-  kittyScore1.graphTotal += 10;
+  kittyScore2.score += 5;
+  kittyScore1.score -= 5;
   $("#button").toggle();
-  renderTable(kittyScore1.graphTotal, kittyScore2.graphTotal)
+  newKitty.renderTable();
   $("#button").text("The gold kitty wins, click here to vote again!");
 
 });
@@ -43,8 +44,8 @@ $("#image2").click(function(event){
     $("#image2").hover('boxShadow', '0 0 50px #ffff00');
     var kittyScore1 = newKitty.kitty1;
     var kittyScore2 = newKitty.kitty2;
-    renderTable(kittyScore2.graphTotal, kittyScore1.graphTotal);
     newKitty.render();
+    newKitty.renderTable();
     $(this).toggle();
   });
 };

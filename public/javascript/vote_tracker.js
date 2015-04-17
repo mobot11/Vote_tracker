@@ -18,8 +18,7 @@ $(function(){
 
     var Kitty = function (imgLink, kitty1, kitty2) {
       this.imgLink = imgLink;
-      this.score = 0;
-      this.graphTotal = 50;
+      this.score = 50;
       this.kitty1 = '';
       this.kitty2 = '';
     };
@@ -43,11 +42,50 @@ $(function(){
       var kittyImg2 = this.kitty2.imgLink;
       $("#image1").attr("src",kittyImg1);
       $("#image2").attr("src", kittyImg2);
-    };
+      };
+    Kitty.prototype.renderTable = function () {
+      var kittenTable= document.getElementById("kittenTable").getContext("2d");
+      var pieData = [
+        {
+            value: this.kitty2.score,
+            color:"gold"
+        },
+        {
+            value : this.kitty1.score,
+            color : "red"
+        },
+    ];
+    var pieOptions = {
+        segmentShowStroke : false,
+        animateScale : true
+    }
+    new Chart(kittenTable).Doughnut(pieData, pieOptions);
+  };
 
     window.kittyArray = kittyArray;
     window.Kitty = Kitty;
+
+
+
+
+
+
+
+
   };
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  $.ajax({
     url: 'https://api.imgur.com/3/album/GHHvu.json',
