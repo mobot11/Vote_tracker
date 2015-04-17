@@ -14,6 +14,7 @@ img {
   width: 350px;
   height: 350px;
   -webkit-box-shadow: 0 0 50px #000000;
+  position: static;
 
 }
 
