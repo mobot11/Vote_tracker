@@ -47,9 +47,12 @@ header {
   font-family:  'Marcellus SC', serif;
   color: red;
   display: hidden;
+  font-size: 1.3em;
 }
 
 button {
-  width: 50em;
+  width: 26.5em;
   height: 5em;
+  background-color: black;
+  border: none;
 }

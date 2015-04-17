@@ -21,21 +21,28 @@ var events = function () {
     chart.segments[0].value = kittyScore2.score;
     chart.segments[1].value = kittyScore1.score;
     chart.update()
+    $("#button").css('color', 'red');
     $("#button").text("The red kitty wins, click here to vote again!")
 
   });
 
   $("#image2").click(function(event){
     event.preventDefault();
-    $('#image2').css({ boxShadow: '0px 0px 100px #ffff00' });
+    var $image2 = $(this);
+    if ($image2.hasClass('processing'))
+      return;
+    $image2.addClass('processing');
+    $image2.css({ boxShadow: '0px 0px 100px #ffff00' });
     var kittyScore1 = newKitty.kitty1;
     var kittyScore2 = newKitty.kitty2;
     kittyScore2.score += 5;
     kittyScore1.score -= 5;
+    $image2.removeClass('processing');
     $("#button").toggle();
      chart.segments[0].value = kittyScore2.score;
     chart.segments[1].value = kittyScore1.score;
     chart.update();
+    $("#button").css('color', '#F2C335');
     $("#button").text("The gold kitty wins, click here to vote again!");
 
   });
