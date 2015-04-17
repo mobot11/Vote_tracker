@@ -43,30 +43,11 @@ $(function(){
       var kittyImg2 = this.kitty2.imgLink;
       $("#image1").attr("src",kittyImg1);
       $("#image2").attr("src", kittyImg2);
-      var table = function (this.kitty2, this.kitty1) {
-        var kittenTable= document.getElementById("kittenTable").getContext("2d");
-    var pieData = [
-      {
-        value: value1,
-        color:"gold"
-      },
-     {
-        value : value2,
-        color : "red"
-    },
-  ];
-    var pieOptions = {
-      segmentShowStroke : false,
-      animateScale : true
-    }
-  new Chart(kittenTable).Doughnut(pieData, pieOptions);
-  };
+    };
 
     window.kittyArray = kittyArray;
     window.Kitty = Kitty;
   };
-      };
-
 
  $.ajax({
     url: 'https://api.imgur.com/3/album/GHHvu.json',
@@ -89,7 +70,6 @@ $(function(){
 
 
 });
-
 
 
 
