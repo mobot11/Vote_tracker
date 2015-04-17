@@ -45,7 +45,7 @@ $("#image2").click(function(event){
     var kittyScore1 = newKitty.kitty1;
     var kittyScore2 = newKitty.kitty2;
     newKitty.render();
-    newKitty.renderTable();
+    // newKitty.renderTable();
     $(this).toggle();
   });
 };
